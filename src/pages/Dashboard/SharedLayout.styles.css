@@ -1,0 +1,8 @@
+.dashboard-wrapper {
+  height: 100vh;
+  background-color: rgb(208, 230, 255);
+}
+.data-wrapper {
+  height: calc(100vh - 15vh);
+  border-radius: 20px;
+}

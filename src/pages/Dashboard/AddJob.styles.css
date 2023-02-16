@@ -1,0 +1,108 @@
+.add-job-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.all-jobs-card {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 10px;
+  width: 30% !important;
+}
+
+.all-jobs-card-header {
+  background-color: #333;
+  padding: 16px;
+  text-align: center;
+  color: white;
+}
+
+.all-jobs-card-header .text-header {
+  margin: 0;
+  font-size: 18px;
+}
+
+.all-jobs-card-body {
+  padding: 16px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 1px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.submit-btn {
+  margin: 10px;
+  position: relative;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  display: inline-block;
+  border-radius: 1em;
+  transition: all 0.2s;
+  border: none;
+  font-family: inherit;
+  font-weight: 500;
+  color: black;
+  background-color: white;
+}
+
+.submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.submit-btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.submit-btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.submit-btn::after {
+  background-color: #fff;
+}
+
+.submit-btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+@media screen and (max-width: 980px) {
+  .all-jobs-card {
+    width: 90% !important;
+  }
+}

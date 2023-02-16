@@ -1,0 +1,23 @@
+.side-bar-wrapper {
+  display: flex;
+  padding-top: 100px;
+  gap: 30px;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(248, 249, 250);
+  width: 21em;
+  height: calc(100vh - 15vh);
+}
+.sidebar-text {
+  font-family: "Rajdhani", sans-serif;
+}
+@media screen and (max-width: 990px) {
+  .side-bar-wrapper {
+    display: none;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .side-bar-wrapper {
+    width: 15em;
+  }
+}

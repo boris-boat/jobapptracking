@@ -1,0 +1,15 @@
+.navbar-text {
+  font-family: "Rajdhani", sans-serif;
+}
+.menu-button {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .menu-button {
+    display: block;
+  }
+  .navbar-text {
+    text-align: center;
+  }
+}

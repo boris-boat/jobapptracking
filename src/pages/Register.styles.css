@@ -1,0 +1,20 @@
+.register-form {
+  padding: 30px;
+  border-radius: 30px;
+  background-color: rgb(208, 230, 255);
+
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+}
+.red {
+  box-shadow: 0 0 0 1px rgb(255, 0, 0) !important;
+}
+.green {
+  box-shadow: 0 0 0 1px rgb(72, 255, 0) !important;
+}
+@media screen and (max-width: 580px) {
+  .login-img {
+    object-fit: contain;
+    width: 100%;
+  }
+}

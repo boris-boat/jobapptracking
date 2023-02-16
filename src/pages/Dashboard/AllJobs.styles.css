@@ -1,0 +1,10 @@
+.all-jobs-wrapper {
+  transition: 0.3s ease;
+  width: 100%;
+}
+
+@media screen and (max-width: 990px) {
+  .filter-wrapper {
+    width: 90%;
+  }
+}
