@@ -7,4 +7,7 @@
   .filter-wrapper {
     width: 90%;
   }
+  .all-jobs-wrapper:last-child {
+    margin-bottom: 20px;
+  }
 }

@@ -10,7 +10,7 @@ const SingleJob = ({ job }) => {
   const user = useSelector((state) => state.user);
   const [showModal, setShowModal] = useState(false);
   return (
-    <Card>
+    <Card className="my-3">
       <Card.Body>
         <Card.Title className="text-center">{job.company}</Card.Title>
         <Card.Subtitle className="mb-3 text-center">

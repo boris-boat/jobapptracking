@@ -61,17 +61,22 @@ const NavBar = () => {
           <Offcanvas.Title>Menu</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          <Link to={"/dashboard"} style={{ textDecoration: "none" }}>
-            <h3 className="sidebar-text">Stats</h3>
-          </Link>
-          <Link to={"alljobs"} style={{ textDecoration: "none" }}>
-            {" "}
-            <h3 className="sidebar-text">All Applications</h3>
-          </Link>
-          <Link to={"addjob"} style={{ textDecoration: "none" }}>
-            {" "}
-            <h3 className="sidebar-text">Add new</h3>
-          </Link>
+          <Container
+            fluid
+            className="h-100 d-flex justify-content-center align-items-center flex-column gap-3"
+          >
+            <Link to={"/dashboard"} style={{ textDecoration: "none" }}>
+              <h3 className="sidebar-text">Stats</h3>
+            </Link>
+            <Link to={"alljobs"} style={{ textDecoration: "none" }}>
+              {" "}
+              <h3 className="sidebar-text">All Applications</h3>
+            </Link>
+            <Link to={"addjob"} style={{ textDecoration: "none" }}>
+              {" "}
+              <h3 className="sidebar-text">Add new</h3>
+            </Link>
+          </Container>
         </Offcanvas.Body>
       </Offcanvas>
     </Navbar>

@@ -46,7 +46,7 @@ const AllJobs = () => {
       fluid
       className="d-flex justify-content-center align-items-center h-100 overflow-auto flex-column "
     >
-      <Row className="d-flex justify-content-center align-items-center filter-wrapper mb-3">
+      <Row className="d-flex justify-content-center align-items-center filter-wrapper mb-3 mt-3">
         <h4 className="text-center">Filter</h4>
         <Form.Select
           value={statusFilter}
@@ -75,7 +75,7 @@ const AllJobs = () => {
           />
         </Form>
       </Row>
-      <Row className="d-flex justify-content-center align-items-center h-75 w-100 g-3 all-jobs-wrapper">
+      <Row className="d-flex justify-content-center align-items-center h-75 w-100  all-jobs-wrapper ">
         {displayJobs?.map((job, index) => (
           <Col lg={4} md={6} key={index}>
             <SingleJob job={job}></SingleJob>
