@@ -11,6 +11,10 @@ const Stats = () => {
   const pending = user.jobs.filter((job) => job.status === "Pending");
   const declined = user.jobs.filter((job) => job.status === "Declined");
   const [quote, setQuote] = useState("");
+  const handleClick = (filter) => {
+    dispatch(setStatusFilter(filter));
+    navigate("alljobs");
+  };
   useEffect(() => {
     // const getQuote = async () => {
     //   const res = await fetch("http://localhost:3001/jat/getquote")
@@ -21,7 +25,7 @@ const Stats = () => {
   }, []);
   return (
     <Container
-      className="h-100 d-flex justify-content-center align-items-center flex-column "
+      className="h-100 d-flex justify-content-center align-items-center flex-column pb-5 "
       fluid
     >
       <div className="greetings d-flex justify-content-around align-items-center flex-column">
@@ -37,38 +41,34 @@ const Stats = () => {
           <h1>{user?.name}</h1>
         </Row>
       </div>
-      <Row className="w-lg-50 w-100 text-center mt-5 flex-column flex-lg-row d-flex g-4 animate__animated animate__fadeIn">
-        <Col>
+      <Row className="w-100 text-center flex-column flex-lg-col align-items-center d-flex g-4 animate__animated animate__fadeIn">
+        <Col lg={4}>
           <Card>
             <Card.Body
-              className="stats-categories"
               onClick={() => {
-                dispatch(setStatusFilter(""));
-                navigate("alljobs");
+                handleClick("");
               }}
             >
               <Card.Text>Total jobs : {user?.jobs.length}</Card.Text>
             </Card.Body>
           </Card>
         </Col>{" "}
-        <Col>
+        <Col lg={4}>
           <Card>
             <Card.Body
               onClick={() => {
-                dispatch(setStatusFilter("Pending"));
-                navigate("alljobs");
+                handleClick("Pending");
               }}
             >
               <Card.Text>Pending jobs : {pending?.length}</Card.Text>
             </Card.Body>
           </Card>
         </Col>{" "}
-        <Col>
+        <Col lg={4}>
           <Card>
             <Card.Body
               onClick={() => {
-                dispatch(setStatusFilter("Declined"));
-                navigate("alljobs");
+                handleClick("Declined");
               }}
             >
               <Card.Text>Jobs declined : {declined?.length}</Card.Text>
