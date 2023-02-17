@@ -29,25 +29,26 @@ const NavBar = () => {
         className="d-flex justify-content-center align-items-center w-100"
       >
         <Row className="d-flex justify-content-center align-items-center w-100">
-          <Col lg={10}>
+          <Col lg={4}>
             <Link to={"/dashboard"} style={{ textDecoration: "none" }}>
               <h1 className="navbar-text ms-lg-5 user-select-none">
                 Job Application's tracker
               </h1>
             </Link>
           </Col>
-          <Col
-            className="text-center navbar-text"
-            style={{ cursor: "pointer" }}
-          >
-            <Row>
-              <Col className="menu-button">
+          <Col className="text-center navbar-text">
+            <Row className="flex-lg-column flex-row justify-content-around">
+              <Col className="menu-button" sm={2}>
                 {" "}
                 <h3 onClick={() => setShow(true)} className="user-select-none">
                   Menu
                 </h3>
               </Col>
-              <Col>
+              <Col
+                lg={2}
+                className="align-self-lg-end align-self-center logout-button"
+                style={{ cursor: "pointer" }}
+              >
                 <h3 onClick={logoutUser} className="user-select-none">
                   Logout
                 </h3>

@@ -34,7 +34,7 @@ const AddJob = () => {
     return formValid;
   };
   return (
-    <div className="add-job-wrapper">
+    <div className="add-job-wrapper animate__animated animate__fadeIn">
       <div className="all-jobs-card">
         <div className="all-jobs-card-header">
           <div className="text-header">Add job</div>

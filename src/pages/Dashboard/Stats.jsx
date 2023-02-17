@@ -37,7 +37,7 @@ const Stats = () => {
           <h1>{user?.name}</h1>
         </Row>
       </div>
-      <Row className="w-lg-50 w-100 text-center mt-5 flex-column flex-lg-row d-flex g-4">
+      <Row className="w-lg-50 w-100 text-center mt-5 flex-column flex-lg-row d-flex g-4 animate__animated animate__fadeIn">
         <Col>
           <Card>
             <Card.Body

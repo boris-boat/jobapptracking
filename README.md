@@ -8,6 +8,7 @@ An app made to make tracking job applications a little easier.User have the opti
 Front end : React,React Bootstrap,Redux toolkit,React icons 
 
 Back end : Node JS,Express,JWT
+
 ## Demo
 
 https://applicationtracking.netlify.app/dashboard

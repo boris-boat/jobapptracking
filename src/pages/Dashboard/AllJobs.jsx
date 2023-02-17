@@ -10,6 +10,8 @@ const AllJobs = () => {
   const jobs = useSelector((state) => state.user.jobs);
   const statusFilter = useSelector((state) => state.statusFilter);
   const [displayJobs, setDisplayJobs] = useState([]);
+  const [searchCriteria, setSearchCriteria] = useState("company");
+
   const [sort, setSort] = useState("latest");
   const [filter, setFilter] = useState("");
 
@@ -34,7 +36,7 @@ const AllJobs = () => {
     if (filter !== "") {
       setDisplayJobs(
         tmpArr.filter((job) => {
-          if (job.company.toLowerCase().includes(filter.toLowerCase()))
+          if (job[searchCriteria].toLowerCase().includes(filter.toLowerCase()))
             return job;
         })
       );
@@ -44,10 +46,10 @@ const AllJobs = () => {
   return (
     <Container
       fluid
-      className="d-flex justify-content-center align-items-center h-100 overflow-auto flex-column "
+      className="d-flex justify-content-center align-items-center h-100 overflow-auto flex-column mb-3"
     >
-      <Row className="d-flex justify-content-center align-items-center filter-wrapper mb-3 mt-3">
-        <h4 className="text-center">Filter</h4>
+      <Row className="d-flex justify-content-center align-items-center filter-wrapper mt-5 mb-lg-3">
+        <h4 className="text-center mt-5 mt-lg-0">Filter</h4>
         <Form.Select
           value={statusFilter}
           name=""
@@ -68,14 +70,29 @@ const AllJobs = () => {
           <option value="oldest">Oldest application's first</option>
         </Form.Select>
         <Form className="p-0 mt-3">
-          <Form.Control
-            type="text"
-            placeholder="Search"
-            onChange={(e) => setFilter(e.target.value)}
-          />
+          <Row className="w-100 m-0 p-0 ">
+            <Col className="p-0 me-4 mb-1 mb-lg-0" lg={3}>
+              <Form.Select
+                name=""
+                id=""
+                onChange={(e) => setSearchCriteria(e.target.value)}
+              >
+                <option value="company">Company</option>
+                <option value="position">Position</option>
+              </Form.Select>
+            </Col>
+            <Col className="p-0">
+              <Form.Control
+                className="m-0"
+                type="text"
+                placeholder="Search"
+                onChange={(e) => setFilter(e.target.value)}
+              />
+            </Col>
+          </Row>
         </Form>
       </Row>
-      <Row className="d-flex justify-content-center align-items-center h-75 w-100  all-jobs-wrapper ">
+      <Row className="d-flex justify-content-center align-items-center h-75 w-100  all-jobs-wrapper animate__animated animate__fadeIn">
         {displayJobs?.map((job, index) => (
           <Col lg={4} md={6} key={index}>
             <SingleJob job={job}></SingleJob>

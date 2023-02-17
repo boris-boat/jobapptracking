@@ -2,8 +2,10 @@
   transition: 0.3s ease;
   width: 100%;
 }
-
-@media screen and (max-width: 990px) {
+.filter-wrapper {
+  width: 40%;
+}
+@media screen and (max-width: 992px) {
   .filter-wrapper {
     width: 90%;
   }
