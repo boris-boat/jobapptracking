@@ -44,7 +44,9 @@ const SingleJob = ({ job }) => {
           <Button
             variant="success"
             className="me-3"
-            onClick={() => setShowModal(true)}
+            onClick={() => {
+              setShowModal(true);
+            }}
           >
             Edit
           </Button>

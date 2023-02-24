@@ -46,7 +46,7 @@ const Register = () => {
       className="login-wrapper d-flex justify-content-center align-items-center"
     >
       <Row className="w-100 w-sm-75 d-flex justify-content-center align-items-center flex-column flex-lg-row">
-        <Col>
+        <Col className="animate__animated animate__fadeIn">
           <img src={LoginSvg} alt="" className="login-img" />
         </Col>
         <Col className="d-flex justify-content-center align-items-center flex-column">

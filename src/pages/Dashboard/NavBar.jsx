@@ -67,13 +67,23 @@ const NavBar = () => {
             className="h-100 d-flex justify-content-center align-items-center flex-column gap-3"
           >
             <Link to={"/dashboard"} style={{ textDecoration: "none" }}>
-              <h3 className="sidebar-text">Stats</h3>
+              <h3 className="sidebar-text" onClick={() => setShow(false)}>
+                Stats
+              </h3>
             </Link>
-            <Link to={"alljobs"} style={{ textDecoration: "none" }}>
+            <Link
+              to={"alljobs"}
+              style={{ textDecoration: "none" }}
+              onClick={() => setShow(false)}
+            >
               {" "}
               <h3 className="sidebar-text">All Applications</h3>
             </Link>
-            <Link to={"addjob"} style={{ textDecoration: "none" }}>
+            <Link
+              to={"addjob"}
+              style={{ textDecoration: "none" }}
+              onClick={() => setShow(false)}
+            >
               {" "}
               <h3 className="sidebar-text">Add new</h3>
             </Link>

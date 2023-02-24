@@ -93,6 +93,11 @@ const AllJobs = () => {
         </Form>
       </Row>
       <Row className="d-flex justify-content-center align-items-center h-75 w-100  all-jobs-wrapper animate__animated animate__fadeIn">
+        {displayJobs.length == 0 && (
+          <h1 className="text-center no-apps-text">
+            No applications here,time to apply !
+          </h1>
+        )}
         {displayJobs?.map((job, index) => (
           <Col lg={4} md={6} key={index}>
             <SingleJob job={job}></SingleJob>

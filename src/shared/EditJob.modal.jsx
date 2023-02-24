@@ -4,7 +4,7 @@ import Form from "react-bootstrap/Form";
 import "./EditJobModal.styles.css";
 import { useDispatch } from "react-redux";
 import { editJob } from "../slices/userSlices";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export const EditJobModal = (props) => {
   let dispatch = useDispatch();
@@ -60,6 +60,7 @@ export const EditJobModal = (props) => {
           />{" "}
           <Form.Label>Status</Form.Label>
           <Form.Control
+            defaultValue={props.job.status}
             name="status"
             as="select"
             onChange={(e) => {
@@ -101,6 +102,7 @@ export const EditJobModal = (props) => {
                 },
               })
             );
+            setEditedJob({});
             props.onHide();
           }}
         >

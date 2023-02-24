@@ -1,6 +1,6 @@
 .login-wrapper {
-  height: 100vh;
   border-radius: 30px;
+  height: 100vh;
 }
 .login-form {
   padding: 30px;
@@ -15,27 +15,43 @@
   width: 100%;
 }
 .login-text {
+  line-height: 1.6;
   font-family: "Rajdhani", sans-serif;
 }
 .overlay {
-  position: fixed; /* Sit on top of the page content */
-  display: flex; /* Hidden by default */
+  position: fixed;
+  display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%; /* Full width (cover the whole page) */
-  height: 100%; /* Full height (cover the whole page) */
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
-  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-  cursor: pointer; /* Add a pointer on hover */
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+.login-button {
+  display: flex;
+  
+}
+.right-side {
+  border-radius: 20px;
+  height: 80% !important;
 }
 @media screen and (max-width: 580px) {
+  .login-wrapper {
+    margin-top: 30px;
+    height: auto;
+  }
   .login-button {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
+  }
+  .desc-text {
+    display: none;
   }
 }

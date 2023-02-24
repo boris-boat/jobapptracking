@@ -3,7 +3,7 @@ import { Card, Col, Container, Row } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
 import { setStatusFilter } from "../../slices/userSlices";
 import { useNavigate } from "react-router-dom";
-
+import "./Stats.styles.css";
 const Stats = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -16,12 +16,14 @@ const Stats = () => {
     navigate("alljobs");
   };
   useEffect(() => {
-    // const getQuote = async () => {
-    //   const res = await fetch("http://localhost:3001/jat/getquote")
-    //     .then((res) => res.json())
-    //     .then((quote) => setQuote(quote[0]));
-    // };
-    // getQuote();
+    const getQuote = async () => {
+      fetch("https://type.fit/api/quotes")
+        .then((res) => res.json())
+        .then((quote) =>
+          setQuote(quote[(Math.random() * quote.length).toFixed(0)])
+        );
+    };
+    getQuote();
   }, []);
   return (
     <Container
@@ -29,13 +31,13 @@ const Stats = () => {
       fluid
     >
       <div className="greetings d-flex justify-content-around align-items-center flex-column">
-        {/* <Row>
+        <Row>
           <div className="quote mb-5">
-            <h5 className="quote-text text-center">"{quote.q}"</h5>
+            <h5 className="quote-text text-center">"{quote.text}"</h5>
 
-            <h6 className="text-center">{quote.a}</h6>
+            <h6 className="text-center">{quote.author}</h6>
           </div>
-        </Row> */}
+        </Row>
         <Row className="text-center mb-5">
           <h1>Welcome </h1>
           <h1>{user?.name}</h1>
@@ -45,6 +47,7 @@ const Stats = () => {
         <Col lg={4}>
           <Card>
             <Card.Body
+              className="stats-item"
               onClick={() => {
                 handleClick("");
               }}
@@ -56,6 +59,7 @@ const Stats = () => {
         <Col lg={4}>
           <Card>
             <Card.Body
+              className="stats-item"
               onClick={() => {
                 handleClick("Pending");
               }}
@@ -67,6 +71,7 @@ const Stats = () => {
         <Col lg={4}>
           <Card>
             <Card.Body
+              className="stats-item"
               onClick={() => {
                 handleClick("Declined");
               }}
