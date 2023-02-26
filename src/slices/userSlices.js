@@ -5,7 +5,7 @@ import {
 } from "../utils/localStorage";
 
 const API = import.meta.env.VITE_API_URL;
-// const API = "http://localhost:3001/jat/";
+// const API = "http://localhost:3001/jat/ ";
 
 export const register = createAsyncThunk("userRegister", async (data) => {
   return fetch(API + "register", {
