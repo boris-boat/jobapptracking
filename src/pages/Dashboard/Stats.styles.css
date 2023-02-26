@@ -6,3 +6,11 @@
 .stats-item {
   cursor: pointer;
 }
+.quote {
+  width: 100% !important;
+}
+@media screen and (max-width: 992px) {
+  .quote {
+    width: 100%;
+  }
+}

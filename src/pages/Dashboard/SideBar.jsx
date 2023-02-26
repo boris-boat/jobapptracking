@@ -3,7 +3,7 @@ import "./SideBar.styles.css";
 import { Link } from "react-router-dom";
 const SideBar = () => {
   return (
-    <div className="side-bar-wrapper">
+    <div className="side-bar-wrapper animate__animated animate__fadeInLeft">
       <Link to={"/dashboard"} style={{ textDecoration: "none" }}>
         <h3 className="sidebar-text">Stats</h3>
       </Link>

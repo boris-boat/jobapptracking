@@ -53,7 +53,7 @@ const Login = () => {
         <Col className="animate__animated animate__fadeIn">
           <img src={LoginSvg} alt="" className="login-img" />
         </Col>
-        <Col className="d-flex justify-content-center align-items-center flex-column text-center p-5 me-3 right-side">
+        <Col className="d-flex justify-content-center align-items-center flex-column text-center p-lg-5 me-3 right-side mt-4">
           <Row>
             <h1 className="login-text m-0 ">JOB APPLICATION TRACKER</h1>
             <h3 className="login-text">
@@ -78,7 +78,7 @@ const Login = () => {
               platforms.
             </h6x>
           </Row>
-          <Row className="w-100 d-flex justify-content-center align-items-center flex-column mt-5">
+          <Row className="w-100 d-flex justify-content-center align-items-center flex-column mt-lg-3">
             <Col lg={8} sm={12}>
               <Form
                 className="login-form"

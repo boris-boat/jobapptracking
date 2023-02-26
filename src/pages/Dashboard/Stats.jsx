@@ -27,23 +27,25 @@ const Stats = () => {
   }, []);
   return (
     <Container
-      className="h-100 d-flex justify-content-center align-items-center flex-column pb-5 "
+      className="h-100 w-100 d-flex justify-content-center align-items-center flex-column pb-5 overflow-hidden"
       fluid
     >
-      <div className="greetings d-flex justify-content-around align-items-center flex-column">
-        <Row>
-          <div className="quote mb-5">
-            <h5 className="quote-text text-center">"{quote.text}"</h5>
+      <div className="greetings d-flex justify-content-around align-items-center flex-column w-75">
+        {quote ? (
+          <Row className="w-lg-100">
+            <div className="quote mb-5">
+              <h5 className="quote-text text-center">"{quote.text}"</h5>
 
-            <h6 className="text-center">{quote.author}</h6>
-          </div>
-        </Row>
+              <h6 className="text-center">{quote.author}</h6>
+            </div>
+          </Row>
+        ) : null}
         <Row className="text-center mb-5">
           <h1>Welcome </h1>
           <h1>{user?.name}</h1>
         </Row>
       </div>
-      <Row className="w-100 text-center flex-column flex-lg-col align-items-center d-flex g-4 animate__animated animate__fadeIn">
+      <Row className="w-100 text-center flex-column flex-lg-col align-items-center d-flex g-4 animate__animated animate__fadeInUp">
         <Col lg={4}>
           <Card>
             <Card.Body

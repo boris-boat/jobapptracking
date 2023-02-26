@@ -23,10 +23,14 @@ const NavBar = () => {
   }, [location.href]);
 
   return (
-    <Navbar bg="light" style={{ height: "15vh" }}>
+    <Navbar
+      bg="light"
+      style={{ height: "15vh" }}
+      className="animate__animated animate__fadeInDown"
+    >
       <Container
         fluid
-        className="d-flex justify-content-center align-items-center w-100"
+        className="d-flex justify-content-center align-items-center w-100 "
       >
         <Row className="d-flex justify-content-center align-items-center w-100">
           <Col lg={4}>

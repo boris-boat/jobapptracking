@@ -49,9 +49,12 @@ const Register = () => {
         <Col className="animate__animated animate__fadeIn">
           <img src={LoginSvg} alt="" className="login-img" />
         </Col>
-        <Col className="d-flex justify-content-center align-items-center flex-column">
+        <Col className="d-flex justify-content-center align-items-center flex-column ">
           <Row>
-            <h1 className="mb-5 login-text">JOB APPLICATION TRACKER</h1>
+            <h1 className="mb-lg-5  mb-2 mt-2 login-text text-center">
+              JOB APPLICATION TRACKER
+            </h1>
+            <h4 className="mb-lg-5 mb-3 text-center">Create an account !</h4>
           </Row>
           <Row className="w-100 d-flex justify-content-center align-items-center flex-column">
             <Col lg={8} sm={12}>
