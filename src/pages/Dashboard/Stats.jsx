@@ -33,8 +33,8 @@ const Stats = () => {
       <div className="greetings d-flex justify-content-around align-items-center flex-column w-75">
         {quote ? (
           <Row className="w-lg-100">
-            <div className="quote mb-5">
-              <h5 className="quote-text text-center">"{quote.text}"</h5>
+            <div className="quote mb-5 animate__animated animate__fadeIn">
+              <h5 className="quote-text text-center">{quote.text}</h5>
 
               <h6 className="text-center">{quote.author}</h6>
             </div>
