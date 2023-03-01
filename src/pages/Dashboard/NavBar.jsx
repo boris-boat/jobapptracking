@@ -7,6 +7,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { logout } from "../../slices/userSlices";
 import { Col, Row, Offcanvas } from "react-bootstrap";
+import { HiLogout } from "react-icons/hi";
 const NavBar = () => {
   const { pathName } = useLocation();
   const [show, setShow] = useState(false);
@@ -54,7 +55,7 @@ const NavBar = () => {
                 style={{ cursor: "pointer" }}
               >
                 <h3 onClick={logoutUser} className="user-select-none">
-                  Logout
+                  Logout <HiLogout />
                 </h3>
               </Col>
             </Row>

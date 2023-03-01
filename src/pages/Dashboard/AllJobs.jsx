@@ -22,7 +22,6 @@ const AllJobs = () => {
       tmpArr = tmpArr.filter((job) => job.status === statusFilter);
       setDisplayJobs(tmpArr);
     }
-
     if (sort == "latest") {
       setDisplayJobs(
         tmpArr.sort((a, b) => new Date(b.dateApplied) - new Date(a.dateApplied))
@@ -46,7 +45,7 @@ const AllJobs = () => {
   return (
     <Container
       fluid
-      className="d-flex justify-content-center align-items-center h-100 overflow-auto flex-column mb-3"
+      className="d-flex justify-content-start align-items-center h-100 overflow-auto flex-column mb-3"
     >
       <Row className="d-flex justify-content-center align-items-center filter-wrapper mt-5 mb-lg-3">
         <h4 className="text-center mt-5 mt-lg-0">Filter</h4>
@@ -92,9 +91,9 @@ const AllJobs = () => {
           </Row>
         </Form>
       </Row>
-      <Row className="d-flex justify-content-center align-items-center h-75 w-100  all-jobs-wrapper animate__animated animate__fadeIn">
+      <Row className="d-flex justify-content-center align-items-center w-100  all-jobs-wrapper animate__animated animate__fadeIn">
         {displayJobs.length == 0 && (
-          <h1 className="text-center no-apps-text">
+          <h1 className="text-center no-apps-text mt-5">
             No applications here,time to apply !
           </h1>
         )}

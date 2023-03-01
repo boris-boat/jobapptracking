@@ -7,13 +7,15 @@
 
 @media screen and (max-width: 1000px) {
   .menu-button {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 30% !important;
   }
   .navbar-text {
     text-align: center;
   }
   .logout-button {
-    width: 30% !important;
+    width: 40% !important;
   }
 }

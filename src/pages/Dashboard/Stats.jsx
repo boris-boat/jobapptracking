@@ -3,43 +3,42 @@ import { Card, Col, Container, Row } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
 import { setStatusFilter } from "../../slices/userSlices";
 import { useNavigate } from "react-router-dom";
+import { SpinnerCircular } from "spinners-react";
+
 import "./Stats.styles.css";
+import { useGetQuote } from "../../utils/useGetQuote";
 const Stats = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user);
   const pending = user.jobs.filter((job) => job.status === "Pending");
   const declined = user.jobs.filter((job) => job.status === "Declined");
-  const [quote, setQuote] = useState("");
   const handleClick = (filter) => {
     dispatch(setStatusFilter(filter));
     navigate("alljobs");
   };
-  useEffect(() => {
-    const getQuote = async () => {
-      fetch("https://type.fit/api/quotes")
-        .then((res) => res.json())
-        .then((quote) =>
-          setQuote(quote[(Math.random() * quote.length).toFixed(0)])
-        );
-    };
-    getQuote();
-  }, []);
+  const { quote } = useGetQuote();
   return (
     <Container
       className="h-100 w-100 d-flex justify-content-center align-items-center flex-column pb-5 overflow-hidden"
       fluid
     >
       <div className="greetings d-flex justify-content-around align-items-center flex-column w-75">
-        {quote ? (
-          <Row className="w-lg-100">
-            <div className="quote mb-5 animate__animated animate__fadeIn">
-              <h5 className="quote-text text-center">{quote.text}</h5>
+        <Row className="w-lg-100">
+          <div className="quote mb-5 ">
+            {quote && (
+              <>
+                <h5 className="quote-text text-center animate__animated animate__fadeIn">
+                  {quote.text}
+                </h5>
+                <h6 className="text-center animate__animated animate__fadeIn">
+                  {quote.author}
+                </h6>
+              </>
+            )}
+          </div>
+        </Row>
 
-              <h6 className="text-center">{quote.author}</h6>
-            </div>
-          </Row>
-        ) : null}
         <Row className="text-center mb-5">
           <h1>Welcome </h1>
           <h1>{user?.name}</h1>
