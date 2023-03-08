@@ -24,6 +24,11 @@ const SideBar = () => {
         {" "}
         <h3 className="sidebar-text">Add new</h3>
       </Link>
+      <Link to={"sites"} style={{ textDecoration: "none" }}>
+        {" "}
+        <h3 className="sidebar-text">Sites</h3>
+      </Link>
+
       {/* <Link to={"profile"}>Profile</Link> */}
     </div>
   );

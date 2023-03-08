@@ -59,24 +59,6 @@ const Login = () => {
             <h3 className="login-text">
               the ultimate solution for managing your job applications!
             </h3>
-            <h6x className="login-text mb-3 w-75 m-auto desc-text">
-              We understand how overwhelming it can be to keep track of all the
-              job applications you've submitted, and that's why we've created a
-              simple, user-friendly platform to help you stay on top of your
-              game. With JOB APPLICATION TRACKER, you can easily keep track of
-              every job application you've submitted, along with important
-              details like application deadlines, interview dates, and follow-up
-              actions. Our powerful tracking features help you stay organized
-              and ensure that you never miss an opportunity.Whether you're
-              looking for a job in tech, finance, or any other field, JOB
-              APPLICATION TRACKER can help you stay focused and achieve your
-              career goals. Our platform is secure and easy to use, with
-              encryption and authentication measures in place to protect your
-              sensitive data. You can access JOB APPLICATION TRACKER from
-              anywhere, whether you're on your desktop or mobile device, and our
-              responsive design ensures a seamless experience across all
-              platforms.
-            </h6x>
           </Row>
           <Row className="w-100 d-flex justify-content-center align-items-center flex-column mt-lg-3">
             <Col lg={8} sm={12}>

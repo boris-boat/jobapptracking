@@ -11,6 +11,8 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import ProtectedRoute from "./utils/ProtectedRoute";
 import PageNotFound from "./pages/PageNotFound";
+import Sites from "./pages/Dashboard/Sites";
+import Landing from "./pages/Landing";
 const store = configureStore({
   reducer: userSlice.reducer,
 });
@@ -32,8 +34,10 @@ function App() {
               <Route path="addjob" element={<AddJob />} />
               <Route path="alljobs" element={<AllJobs />} />
               <Route path="profile" element={<Profile />} />
+              <Route path="sites" element={<Sites />} />
             </Route>
-            <Route path="/" element={<Login />} />
+            <Route path="/" element={<Landing />} />
+            <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="*" element={<PageNotFound />} />
           </Routes>

@@ -2,14 +2,7 @@
   border-radius: 30px;
   height: 100vh;
 }
-.login-form {
-  padding: 30px;
-  border-radius: 30px;
-  background-color: rgb(208, 230, 255);
 
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset,
-    rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
-}
 .login-img {
   object-fit: contain;
   width: 100%;
@@ -39,6 +32,10 @@
 .right-side {
   border-radius: 20px;
   height: 80% !important;
+}
+.get-started-button {
+  text-decoration: none;
+  color: white !important;
 }
 @media screen and (max-width: 580px) {
   .login-wrapper {

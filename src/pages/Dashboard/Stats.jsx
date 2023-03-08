@@ -20,7 +20,7 @@ const Stats = () => {
   const { quote } = useGetQuote();
   return (
     <Container
-      className="h-100 w-100 d-flex justify-content-center align-items-center flex-column pb-5 overflow-hidden"
+      className="h-100 w-100 d-flex justify-content-center align-items-center flex-column pb-5 overflow-hidden gap-5"
       fluid
     >
       <div className="greetings d-flex justify-content-around align-items-center flex-column w-75">
@@ -39,7 +39,7 @@ const Stats = () => {
           </div>
         </Row>
 
-        <Row className="text-center mb-5">
+        <Row className="text-center">
           <h1>Welcome </h1>
           <h1>{user?.name}</h1>
         </Row>

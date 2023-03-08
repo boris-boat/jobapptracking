@@ -1,0 +1,28 @@
+.single-site {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  border-radius: 5px;
+  background-color: white;
+  width: 50% !important;
+  height: 50px;
+}
+.title {
+  width: 50%;
+}
+.title-input {
+  width: 50% !important;
+}
+@media screen and (max-width: 992px) {
+  .single-site {
+    width: 100% !important;
+  }
+  .forma {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .title-input {
+    width: 100% !important;
+  }
+}

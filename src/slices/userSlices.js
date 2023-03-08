@@ -5,7 +5,7 @@ import {
 } from "../utils/localStorage";
 
 const API = import.meta.env.VITE_API_URL;
-// const API = "http://localhost:3001/jat/ ";
+// const API = "http://localhost:8080/jat/";
 
 export const register = createAsyncThunk("userRegister", async (data) => {
   return fetch(API + "register", {
@@ -64,7 +64,20 @@ export const editJob = createAsyncThunk("editJob", async (data) => {
     body: JSON.stringify(data),
   }).then((response) => response.json());
 });
-
+export const addSite = createAsyncThunk("addSite", async (data) => {
+  return fetch(API + "addSite", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  }).then((response) => response.json());
+});
+export const deleteSite = createAsyncThunk("deleteSite", async (data) => {
+  return fetch(API + "deleteSite", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  }).then((response) => response.json());
+});
 export const userSlice = createSlice({
   name: "user",
   initialState: {
@@ -139,6 +152,13 @@ export const userSlice = createSlice({
     [loginWithToken.rejected]: (state, action) => {
       state.tokenLogingIn = false;
       console.error(action.payload);
+    },
+    [addSite.fulfilled]: (state, action) => {
+      state.user = action.payload;
+    },
+    [deleteSite.fulfilled]: (state, action) => {
+      // console.log(action.payload);
+      state.user = action.payload;
     },
   },
 });

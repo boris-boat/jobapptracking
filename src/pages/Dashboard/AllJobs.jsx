@@ -47,8 +47,8 @@ const AllJobs = () => {
       fluid
       className="d-flex justify-content-start align-items-center h-100 overflow-auto flex-column mb-3"
     >
-      <Row className="d-flex justify-content-center align-items-center filter-wrapper mt-5 mb-lg-3">
-        <h4 className="text-center mt-5 mt-lg-0">Filter</h4>
+      <Row className="d-flex justify-content-center align-items-center filter-wrapper mt-lg-5 mt-3 mb-lg-3">
+        <h4 className="text-center mb-3">Filter</h4>
         <Form.Select
           value={statusFilter}
           name=""
@@ -91,7 +91,7 @@ const AllJobs = () => {
           </Row>
         </Form>
       </Row>
-      <Row className="d-flex justify-content-center align-items-center w-100  all-jobs-wrapper animate__animated animate__fadeIn">
+      <Row className="d-flex justify-content-center align-items-center w-100 all-jobs-wrapper mt-3 mt-lg-0 animate__animated animate__fadeIn">
         {displayJobs.length == 0 && (
           <h1 className="text-center no-apps-text mt-5">
             No applications here,time to apply !

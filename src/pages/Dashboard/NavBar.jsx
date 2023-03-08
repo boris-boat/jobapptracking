@@ -92,6 +92,14 @@ const NavBar = () => {
               {" "}
               <h3 className="sidebar-text">Add new</h3>
             </Link>
+            <Link
+              to={"sites"}
+              style={{ textDecoration: "none" }}
+              onClick={() => setShow(false)}
+            >
+              {" "}
+              <h3 className="sidebar-text">Sites</h3>
+            </Link>
           </Container>
         </Offcanvas.Body>
       </Offcanvas>

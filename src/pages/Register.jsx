@@ -120,7 +120,7 @@ const Register = () => {
                     </Button>
                   </Col>
                   <Col className="text-center mt-3 mt-lg-0 d-flex justify-content-center align-items-center">
-                    <Link to="/">Back to login?</Link>
+                    <Link to="/login">Back to login?</Link>
                   </Col>
                 </Row>
               </Form>
